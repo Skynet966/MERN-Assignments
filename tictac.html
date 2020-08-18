@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.6.2/tailwind.min.css" integrity="sha512-mZ+ZnjWE+WxIG8b8Ilysrfq7stpTrGu53lofHJbhuIe6iYmURmoXlZ4ycMN7qQoMhR3qWzVXF/q4N4UKfwmZeQ==" crossorigin="anonymous" />
+    <script src="js/tictac.js"></script>
+    <style>
+        .h-line{
+            border-bottom: solid 10px;
+            border-top: solid 10px;
+        }
+        .v-line{
+            border-left: solid 10px;
+            border-right: solid 10px;
+        }
+        td{
+            cursor:pointer;
+            text-align: center;
+            width: 100px;
+            height:100px;
+            font-weight: bolder;
+        }
+        tbody{
+            box-shadow: 0px 0px 45px;
+            border-radius: 10px;
+        }
+        table{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #msg{
+            font-family: monospace;
+            font-size: x-large;
+            font-weight: 500;
+        }
+        .player{
+            display: inline-flex;
+            width:150px;
+            background-color:white;
+            padding: 7px 10px;
+            border:solid 1px yellowgreen;
+            border-radius: 30px;
+            box-shadow: 1px 3px 3px yellowgreen;
+            text-align: left;
+            margin:10px;
+        }
+        .player>div{
+            font-weight:bolder;
+            width:-webkit-fill-available;
+        }
+        .msg{
+            margin:10px;
+        }
+        .active{
+            text-decoration: line-through;
+            font-size: -webkit-xxx-large;
+            box-shadow: 4px 10px 16px black;
+        }
+        .board{
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background-color: #7fff0099;
+            padding: 93px;
+            font-size: 2rem;
+            color: chocolate;
+            font-weight: 700;
+            transition: all 5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" style="float:left;padding:5px;">go to greetApp</a>
+    <a href="calc.html" style="float:right;padding:5px;">go to calc</a>
+    <div style="padding:10px;text-align: center;">
+        <div class="player"><div>X</div><span id="playerX">0</span></div>
+        <div class="player"><div>O</div><span id="playerO">0</span></div>
+        <div class="msg" id="msg">X turn</div>
+        <table style="font-size:xx-large;color:yellowgreen;">
+            <tbody>
+                <tr>
+                    <td id="00"></td>
+                    <td id="01" class="v-line"></td>
+                    <td id="02"></td>
+                </tr>
+                <tr class="h-line">
+                    <td id="10"></td>
+                    <td id="11" class="v-line"></td>
+                    <td id="12"></td>
+                </tr>
+                <tr>
+                    <td id="20"></td>
+                    <td id="21" class="v-line"></td>
+                    <td id="22"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
